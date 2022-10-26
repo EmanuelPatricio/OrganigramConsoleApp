@@ -12,13 +12,13 @@
       {
         Console.Clear();
         Console.Write("Ingrese el departamento a registrar: ");
-        string departamento = Console.ReadLine() ?? "No asignado";
+        string departament = Console.ReadLine() ?? "No asignado";
 
         Console.Write("\nIngrese el departamento al que reportara: ");
-        string departamentoAReportar = Console.ReadLine() ?? root.Value;
+        string departamentToReport = Console.ReadLine() ?? root.Value;
 
-        Node? departamentoPadre = tree.Search(departamentoAReportar, root);
-        tree.Insert(departamento, departamentoPadre);
+        Node? parentDepartament = tree.Search(departamentToReport, root);
+        tree.Insert(departament, parentDepartament);
         tree.PrintTree(root);
 
         Console.Write("¿Desea continuar? [s/n] ");
